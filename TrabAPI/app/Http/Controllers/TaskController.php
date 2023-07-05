@@ -21,7 +21,7 @@ class TaskController extends Controller
        if ($task) {
            return response()->json($task);
        } else {
-           return response()->json(['error' => 'Tarefa não encontrada'], 404);
+           return response()->json(['error' => 'Tarefa não foi encontrada'], 404);
        }
    }
 
@@ -58,7 +58,7 @@ class TaskController extends Controller
 
            return response()->json($task);
        } else {
-           return response()->json(['error' => 'Tarefa não encontrada'], 404);
+           return response()->json(['error' => 'Tarefa não foi encontrada'], 404);
        }
    }
 
@@ -69,9 +69,9 @@ class TaskController extends Controller
        if ($task) {
            $task->delete();
 
-           return response()->json(['message' => 'Tarefa excluída com sucesso']);
+           return response()->json(['message' => 'Tarefa foi excluída com sucesso']);
        } else {
-           return response()->json(['error' => 'Tarefa não encontrada'], 404);
+           return response()->json(['error' => 'Tarefa não foi encontrada'], 404);
        }
    }
 }
